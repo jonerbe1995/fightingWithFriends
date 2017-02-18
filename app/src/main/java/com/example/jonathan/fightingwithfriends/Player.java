@@ -13,12 +13,23 @@ package com.example.jonathan.fightingwithfriends;
  */
 
 public class Player {
-    String name;
-    //Health points
-    int HP = 5;
-    //Will store player moves per round
-    int []moves = new int [3];
-    public Player(String nameIn){
+    /** The name of this player */
+	private String name;
+    
+	/** The number of health points this player has remaining */
+    private int HP;
+    
+   	/** The moves this player is making */
+    private int[] moves;
+    
+    public Player(String nameIn)
+    {
         name = nameIn;
+        HP = 5;
+        moves = new int [3];
     }
+    
+    public String getName() { return name; }
+    public int getHealth() { return HP; }
+    public int[] getMoves() { return moves; }
 }
